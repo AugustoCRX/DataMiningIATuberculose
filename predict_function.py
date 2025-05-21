@@ -22,11 +22,10 @@ def carregar_modelo_e_prever(model_path, image_path):
 
     # Fazer a previsão
     previsao = modelo.predict(img)
-    # Obter a classe com maior probabilidade
-    classe = np.argmax(previsao, axis=1)[0]
-    # Obter o nome da classe
-    nome_classe = list(category_dict.keys())[list(category_dict.values()).index(classe)]
 
-    return nome_classe
+    # Obter o nome da classe
+    probabilidade = previsao[0][1]
+
+    return  probabilidade
 
 carregar_modelo_e_prever(r'model\inception_model.keras', r'img_test\Tuberculosis-2.png')
