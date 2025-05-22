@@ -3,11 +3,6 @@ import numpy as np
 import cv2
 
 def carregar_modelo_e_prever(model_path, image_path):
-    category_dict = {
-        "Normal": 0,
-        "Tuberculose": 1,
-    }
-
     # Carregar o modelo
     modelo = tf.keras.models.load_model(model_path)
 
