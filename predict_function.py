@@ -18,7 +18,7 @@ def carregar_modelo_e_prever(model_path, image_path):
     # Fazer a previsão
     previsao = modelo.predict(img)
 
-    # Obter o nome da classe
+    # Obter a probabilidade de ser tuberculose
     probabilidade = previsao[0][1]
 
     return  probabilidade
